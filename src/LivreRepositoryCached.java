@@ -6,7 +6,9 @@ public class LivreRepositoryCached implements LivreRepository {
 
     @Override
     public void recupererLivre(Livre livre) {
-
+        if(this.livreRepository == null) {
+            livreRepository = new VraiLivreRepository(this);
+        }
         livreRepository.recupererLivre(livre);
     }
 
