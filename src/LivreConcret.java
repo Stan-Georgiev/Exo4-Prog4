@@ -1,6 +1,9 @@
 public class LivreConcret extends Livre{
+    public LivreConcret(String isbn, String titre) {
+        super(isbn, titre);
+    }
     @Override
-    public void enprunter() {
-        System.out.println("En prunter");
+    public void emprunter() {
+        System.out.println("Emprunter");
     }
 }

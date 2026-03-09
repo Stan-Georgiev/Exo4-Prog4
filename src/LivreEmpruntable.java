@@ -6,7 +6,7 @@ public class LivreEmpruntable extends Livre{
     }
 
     @Override
-    public void enprunter() {
-        livre.enprunter();
+    public void emprunter() {
+        livre.emprunter();
     }
 }

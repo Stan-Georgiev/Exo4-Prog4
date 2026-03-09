@@ -4,9 +4,9 @@ public class ConcreteLivreEmpruntable extends LivreEmpruntable {
     }
 
     @Override
-    public void enprunter() {
+    public void emprunter() {
         if (livre.isEmpruntable == false) {
-            System.out.println("Le livre est deja emprunter");
+            System.out.println("Le livre est deja emprunté");
         } else {
             System.out.println("Le livre est empruntable");
         }
