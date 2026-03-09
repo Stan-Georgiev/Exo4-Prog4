@@ -21,4 +21,9 @@ public class Adapter implements LivreRepository {
     public void ajouterLivre(Livre livre) {
         adaptee.ajouterLivre(livre.getTitre(), livre.getIsbn());
     }
+
+    @Override
+    public void recupererLivre(Livre livre) {
+
+    }
 }

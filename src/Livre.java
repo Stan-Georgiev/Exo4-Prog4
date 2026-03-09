@@ -7,6 +7,10 @@ abstract class Livre {
         this.isbn = isbn;
         this.titre = titre;
     }
+
+    public Livre(){
+
+    }
     public boolean isEmpruntable;
     public String getIsbn() {
         return isbn;
