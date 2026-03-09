@@ -1,5 +1,3 @@
-package cstjean.prog4;
-
 /**
  * Interface pour gérer une image.
  *

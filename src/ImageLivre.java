@@ -1,5 +1,3 @@
-package cstjean.prog4;
-
 /**
  * Image d'un livre.
  *
