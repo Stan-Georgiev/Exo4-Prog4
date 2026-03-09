@@ -6,4 +6,9 @@ public class LivreConcret extends Livre{
     public void emprunter() {
         System.out.println("Emprunter");
     }
+
+    @Override
+    public void retourner() {
+        System.out.println("Retourner");
+    }
 }

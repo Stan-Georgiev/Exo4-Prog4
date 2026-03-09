@@ -7,6 +7,10 @@ public class LivreEmpruntable extends Livre{
 
     @Override
     public void emprunter() {
-        livre.emprunter();
+        livre.isEmpruntable = true;
+    }
+    @Override
+    public void retourner() {
+        livre.isEmpruntable = false;
     }
 }
