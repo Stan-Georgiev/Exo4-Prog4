@@ -1,18 +1,23 @@
 import java.util.HashMap;
-import java.util.LinkedHashMap;
+import java.util.Map;
 
 public class FlyweightFacotry {
-    private final HashMap<String, FlyweightBase> flyweights = new LinkedHashMap<>();
+
+    private final Map<String, FlyweightBase> flyweights = new HashMap<>();
 
     public FlyweightBase getFlyweight(String key) {
-        if (flyweights.containsKey(key)) {
-            return flyweights.get(key);
-        }
-        else {
-            ConcreteFlyweight newFlyweight = new ConcreteFlyweight();
-            flyweights.put(key, newFlyweight);
-            return newFlyweight;
-        }
-    }
 
+        FlyweightBase flyweight = flyweights.get(key);
+
+        if (flyweight == null) {
+            System.out.println("Creating new flyweight for key: " + key);
+
+            flyweight = new ConcreteFlyweight(key);
+            flyweights.put(key, flyweight);
+        } else {
+            System.out.println("Reusing existing flyweight for key: " + key);
+        }
+
+        return flyweight;
+    }
 }

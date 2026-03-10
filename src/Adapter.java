@@ -8,12 +8,22 @@ public class Adapter implements LivreRepository {
     }
     @Override
     public List<Livre> getLivres() {
+
         List<Livre> livres = new ArrayList<>();
         List<String> livreStrings = adaptee.getLivres();
-        for (int i  = 0; i < adaptee.getLivres().size(); i++) {
+
+        for (int i = 0; i < livreStrings.size(); i++) {
+
             String[] values = livreStrings.get(i).split("\\|");
-            livres.add(new LivreConcret(values[0], values[1]));
+
+            String titre = values[0];
+            String isbn = values[1];
+
+            FormatLivre format = new FormatPapier();
+
+            livres.add(new LivreConcret(isbn, titre, format));
         }
+
         return livres;
     }
 
